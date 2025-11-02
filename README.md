@@ -35,7 +35,7 @@ A modern, elegant, and intelligent task management application built with pure H
 
 ## 🚀 Live Demo
 
-Visit the live application: **[Ashby Notes](https://your-username.github.io/ashby-notes/)**
+Visit the live application: **[Ashby Notes](https://Titomr2025.github.io/ashby-notes/)**
 
 ## 🛠️ Tech Stack
 
@@ -57,7 +57,7 @@ Visit the live application: **[Ashby Notes](https://your-username.github.io/ashb
 1. Fork this repository
 2. Go to Settings → Pages
 3. Select "Deploy from a branch" → "main"
-4. Your app will be available at `https://yourusername.github.io/ashby-notes/`
+4. Your app will be available at `https://yourusername.github.io/repository-name/`
 
 ## 🔧 Usage
 
@@ -118,8 +118,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Tito Martinez**
 
-- 🌐 GitHub: [@your-username](https://github.com/your-username)
-- 📧 Email: your-email@example.com
+- 🌐 GitHub: [@Titomr2025](https://github.com/Titomr2025)
+- 📧 Project: [Ashby Notes](https://github.com/Titomr2025/ashby-notes)
 
 ## 🙏 Acknowledgments
 
