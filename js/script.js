@@ -93,7 +93,10 @@ function actualizarLista() {
             
             fila.innerHTML = `
                 <td class="id-cell" data-label="ID">${tarea.id}</td>
-                <td class="tarea-cell" data-label="Task">${tarea.descripcion}</td>
+                <td class="tarea-cell" data-label="Task" id="task-${tarea.id}">${tarea.descripcion}</td>
+                <td class="edit-cell" data-label="Edit">
+                    <button class="btn-editar" onclick="editarTarea(${tarea.id})" title="Edit task">✏️ Edit</button>
+                </td>
                 <td class="checkbox-cell" data-label="Action">
                     <button class="btn-completar" onclick="cambiarEstadoPorId(${tarea.id})" title="Mark as completed">✅ Complete</button>
                 </td>
@@ -337,6 +340,100 @@ function exportarTareas() {
     link.click();
     URL.revokeObjectURL(url);
     console.log('Tasks exported');
+}
+
+// Function to edit a task
+function editarTarea(id) {
+    const tarea = tareas.find(t => t.id === id);
+    if (!tarea || tarea.completado) {
+        alert('Cannot edit completed tasks');
+        return;
+    }
+    
+    const nuevaDescripcion = prompt('Edit task description:', tarea.descripcion);
+    
+    if (nuevaDescripcion === null) {
+        // User cancelled
+        return;
+    }
+    
+    if (nuevaDescripcion.trim() === '') {
+        alert('Task description cannot be empty');
+        return;
+    }
+    
+    // Update task description
+    tarea.descripcion = nuevaDescripcion.trim();
+    
+    // Save to localStorage
+    guardarTareas();
+    
+    // Update the display
+    actualizarLista();
+    
+    console.log(`Task ID:${id} updated to: "${tarea.descripcion}"`);
+}
+
+// Alternative inline editing function (more professional)
+function editarTareaInline(id) {
+    const tarea = tareas.find(t => t.id === id);
+    if (!tarea || tarea.completado) {
+        return;
+    }
+    
+    const cellElement = document.getElementById(`task-${id}`);
+    const originalText = tarea.descripcion;
+    
+    // Create input element
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.value = originalText;
+    input.className = 'edit-input';
+    input.style.cssText = `
+        width: 100%;
+        padding: 8px;
+        border: 2px solid var(--corporate-navy);
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: inherit;
+        background: #fff;
+    `;
+    
+    // Replace cell content with input
+    cellElement.innerHTML = '';
+    cellElement.appendChild(input);
+    input.focus();
+    input.select();
+    
+    // Save function
+    const saveEdit = () => {
+        const newValue = input.value.trim();
+        if (newValue === '') {
+            alert('Task description cannot be empty');
+            input.focus();
+            return;
+        }
+        
+        tarea.descripcion = newValue;
+        guardarTareas();
+        actualizarLista();
+        console.log(`Task ID:${id} updated to: "${newValue}"`);
+    };
+    
+    // Cancel function
+    const cancelEdit = () => {
+        actualizarLista();
+    };
+    
+    // Event listeners
+    input.addEventListener('blur', saveEdit);
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            saveEdit();
+        } else if (e.key === 'Escape') {
+            cancelEdit();
+        }
+    });
 }
 
 // Storage optimization and monitoring functions

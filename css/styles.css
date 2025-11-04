@@ -1,19 +1,24 @@
-/* Variables CSS elegantes */
+/* Professional Corporate Color Scheme */
 :root {
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --secondary-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    --success-gradient: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
-    --warning-gradient: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
-    --danger-gradient: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
-    --glass-bg: rgba(255, 255, 255, 0.95);
-    --glass-border: rgba(102, 126, 234, 0.2);
-    --shadow-light: 0 8px 25px rgba(0, 0, 0, 0.08);
-    --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.12);
-    --shadow-heavy: 0 25px 50px rgba(0, 0, 0, 0.15);
-    --text-primary: #2d3748;
-    --text-secondary: #718096;
-    --border-radius: 20px;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --primary-gradient: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    --secondary-gradient: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+    --success-gradient: linear-gradient(135deg, #065f46 0%, #064e3b 100%);
+    --warning-gradient: linear-gradient(135deg, #92400e 0%, #78350f 100%);
+    --danger-gradient: linear-gradient(135deg, #991b1b 0%, #7f1d1d 100%);
+    --glass-bg: rgba(255, 255, 255, 0.98);
+    --glass-border: rgba(31, 41, 55, 0.12);
+    --shadow-light: 0 4px 16px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow-heavy: 0 12px 32px rgba(0, 0, 0, 0.12);
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --corporate-navy: #1f2937;
+    --corporate-dark: #111827;
+    --corporate-gray: #6b7280;
+    --corporate-light: #f9fafb;
+    --corporate-accent: #92400e;
+    --border-radius: 8px;
+    --transition: all 0.2s ease;
 }
 
 * {
@@ -26,7 +31,7 @@ body {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 20px 20px 0 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #f9fafb;
     min-height: 100vh;
     line-height: 1.6;
     color: var(--text-primary);
@@ -62,18 +67,17 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 15px;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .welcome-section p {
     font-size: 1.1rem;
-    color: var(--text-secondary);
-    font-weight: 400;
+    color: var(--text-primary);
+    font-weight: 500;
     max-width: 600px;
     margin: 0 auto;
+    opacity: 0.8;
 }
 
 /* Resumen moderno */
@@ -81,16 +85,18 @@ body {
     margin-bottom: 25px;
     font-size: 18px;
     text-align: center;
-    padding: 20px;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.12), rgba(55, 65, 81, 0.12));
     border-radius: 15px;
     border: 2px solid var(--glass-border);
-    font-weight: 500;
+    font-weight: 600;
+    color: var(--text-primary);
 }
 
 .resumen span {
-    font-weight: 700;
-    color: #667eea;
+    font-weight: 800;
+    color: var(--corporate-blue);
+    font-size: 20px;
 }
 
 /* Input section profesional */
@@ -113,11 +119,11 @@ body {
 
 #descripcionTarea {
     flex: 1;
-    padding: 15px 20px;
-    border: 2px solid var(--glass-border);
-    border-radius: 12px;
-    font-size: 16px;
-    background: rgba(255, 255, 255, 0.9);
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    background: white;
     transition: var(--transition);
     outline: none;
     color: var(--text-primary);
@@ -125,9 +131,8 @@ body {
 }
 
 #descripcionTarea:focus {
-    border-color: #667eea;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+    border-color: var(--corporate-navy);
+    box-shadow: 0 0 0 3px rgba(31, 41, 55, 0.1);
 }
 
 #descripcionTarea::placeholder {
@@ -139,24 +144,23 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 15px 30px;
-    background: var(--primary-gradient);
+    padding: 12px 24px;
+    background: var(--corporate-navy);
     color: white;
     border: none;
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     transition: var(--transition);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: var(--shadow-light);
     min-width: 120px;
     font-family: inherit;
 }
 
 #agregarTarea:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-    filter: brightness(1.1);
+    background: var(--corporate-dark);
+    box-shadow: var(--shadow-medium);
 }
 
 #agregarTarea:active {
@@ -179,24 +183,27 @@ body {
 }
 
 .titulo-seccion {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 20px;
-    padding: 15px 20px;
-    border-radius: 12px;
-    text-align: center;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 16px 24px;
+    border-radius: var(--border-radius);
+    text-align: left;
+    color: var(--text-primary);
+    background: white;
+    border: 1px solid #e5e7eb;
+    box-shadow: var(--shadow-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.875rem;
 }
 
 .seccion-tareas:first-of-type .titulo-seccion {
-    background: linear-gradient(135deg, #ffa726, #ff7043);
-    border: 2px solid rgba(255, 167, 38, 0.3);
+    border-left: 4px solid #92400e;
 }
 
 .seccion-tareas:last-of-type .titulo-seccion {
-    background: linear-gradient(135deg, #4caf50, #2e7d32);
-    border: 2px solid rgba(76, 175, 80, 0.3);
+    border-left: 4px solid #065f46;
 }
 
 /* Estilos de tablas */
@@ -204,26 +211,31 @@ table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
+    background: white;
+    border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-light);
+    border: 1px solid #e5e7eb;
 }
 
 th, td {
-    padding: 18px;
+    padding: 12px 18px;
     text-align: left;
-    border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+    border-bottom: 1px solid #f3f4f6;
     transition: var(--transition);
+    color: var(--text-primary);
+    font-weight: 400;
 }
 
 th {
-    background: var(--primary-gradient);
-    color: white;
+    background: #f9fafb;
+    color: var(--text-primary);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 12px 18px;
 }
 
 tbody tr {
@@ -231,8 +243,7 @@ tbody tr {
 }
 
 tbody tr:hover {
-    background: rgba(102, 126, 234, 0.05);
-    transform: scale(1.01);
+    background: #f9fafb;
 }
 
 .id-cell {
@@ -247,15 +258,27 @@ tbody tr:hover {
     width: 180px;
     text-align: center;
     font-size: 14px;
-    font-weight: 500;
-    color: var(--text-secondary);
+    font-weight: 700;
+    color: #000000;
     font-family: 'Courier New', monospace;
-    background: rgba(102, 126, 234, 0.05);
+    background: rgba(30, 64, 175, 0.05);
     border-radius: 8px;
+}
+
+.tarea-cell {
+    font-weight: 700;
+    color: #000000;
+    font-size: 15px;
+    line-height: 1.4;
 }
 
 .checkbox-cell {
     width: 120px;
+    text-align: center;
+}
+
+.edit-cell {
+    width: 100px;
     text-align: center;
 }
 
@@ -281,6 +304,24 @@ tbody tr:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
     filter: brightness(1.1);
+}
+
+.btn-editar {
+    background: var(--corporate-accent);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: var(--shadow-light);
+}
+
+.btn-editar:hover {
+    background: #78350f;
+    box-shadow: var(--shadow-medium);
 }
 
 .btn-desmarcar {
@@ -334,7 +375,7 @@ tbody tr:hover {
 }
 
 .checkbox-cell {
-    width: 80px;
+    width: 120px;
     text-align: center;
 }
 
@@ -394,9 +435,11 @@ tbody tr:hover {
 /* Estilos para tareas completadas */
 .texto-tachado {
     text-decoration: line-through;
-    color: #999;
-    opacity: 0.7;
+    text-decoration-thickness: 2px;
+    color: #000000;
+    opacity: 0.8;
     transition: all 0.3s ease;
+    font-weight: 700;
 }
 
 .estado-realizado {
@@ -404,13 +447,13 @@ tbody tr:hover {
     align-items: center;
     gap: 0.25rem;
     font-size: 0.75rem;
-    color: #10b981;
-    font-weight: 600;
+    color: #047857;
+    font-weight: 700;
     margin-left: 0.5rem;
     padding: 0.25rem 0.5rem;
-    background: rgba(16, 185, 129, 0.1);
+    background: rgba(5, 150, 105, 0.15);
     border-radius: 10px;
-    border: 1px solid rgba(16, 185, 129, 0.3);
+    border: 1px solid rgba(5, 150, 105, 0.4);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -639,18 +682,31 @@ tbody tr:hover {
 
 .tarea-completada {
     background: rgba(76, 175, 80, 0.05) !important;
-    opacity: 0.8;
+    opacity: 1;
+}
+
+.tarea-completada .tarea-cell {
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+.tarea-completada .fecha-cell {
+    color: #000000 !important;
+    font-weight: 800 !important;
+    background: rgba(5, 150, 105, 0.1) !important;
 }
 
 /* Tabla vacía mensaje */
 .tabla-vacia {
     text-align: center;
     padding: 40px;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-style: italic;
     font-size: 16px;
-    background: rgba(102, 126, 234, 0.05);
+    font-weight: 500;
+    background: rgba(30, 64, 175, 0.08);
     border-radius: 10px;
+    opacity: 0.8;
 }
 
 
@@ -662,20 +718,20 @@ tbody tr:hover {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #6c757d, #495057);
+    background: var(--secondary-gradient);
     color: white;
     border: none;
     border-radius: 12px;
     cursor: pointer;
     font-size: 16px;
     transition: var(--transition);
-    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.2);
+    box-shadow: 0 4px 15px rgba(55, 65, 81, 0.2);
     opacity: 0.8;
 }
 
 .btn-storage-info:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3);
+    box-shadow: 0 8px 25px rgba(55, 65, 81, 0.3);
     opacity: 1;
 }
 
@@ -730,14 +786,14 @@ tbody tr:hover {
     justify-content: space-between;
     align-items: center;
     padding: 25px 30px;
-    border-bottom: 2px solid rgba(102, 126, 234, 0.1);
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-bottom: 2px solid rgba(30, 64, 175, 0.1);
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(55, 65, 81, 0.1));
     border-radius: 20px 20px 0 0;
 }
 
 .modal-header h3 {
     margin: 0;
-    color: #667eea;
+    color: var(--corporate-blue);
     font-size: 20px;
     font-weight: 600;
 }
@@ -746,7 +802,7 @@ tbody tr:hover {
     background: none;
     border: none;
     font-size: 24px;
-    color: #667eea;
+    color: var(--corporate-blue);
     cursor: pointer;
     width: 30px;
     height: 30px;
@@ -771,7 +827,7 @@ tbody tr:hover {
     justify-content: space-between;
     align-items: center;
     padding: 12px 0;
-    border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+    border-bottom: 1px solid rgba(30, 64, 175, 0.1);
 }
 
 .stat-item:last-of-type {
@@ -786,14 +842,14 @@ tbody tr:hover {
 
 .stat-value {
     font-weight: 700;
-    color: #667eea;
+    color: var(--corporate-blue);
     font-size: 16px;
 }
 
 .storage-bar {
     width: 100%;
     height: 8px;
-    background: rgba(102, 126, 234, 0.1);
+    background: rgba(30, 64, 175, 0.1);
     border-radius: 4px;
     overflow: hidden;
     margin: 15px 0;
@@ -801,7 +857,7 @@ tbody tr:hover {
 
 .storage-progress {
     height: 100%;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: var(--primary-gradient);
     width: 0%;
     transition: width 0.3s ease;
     border-radius: 4px;
@@ -818,7 +874,7 @@ tbody tr:hover {
     display: flex;
     gap: 15px;
     padding: 20px 30px;
-    border-top: 2px solid rgba(102, 126, 234, 0.1);
+    border-top: 2px solid rgba(30, 64, 175, 0.1);
     justify-content: flex-end;
 }
 
@@ -853,12 +909,12 @@ tbody tr:hover {
     font-size: 14px;
     font-weight: 500;
     transition: var(--transition);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.2);
 }
 
 .btn-modal-close:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
 }
 
 /* Storage Alert Banners */
@@ -932,7 +988,7 @@ tbody tr:hover {
     align-items: center;
     gap: 8px;
     padding: 10px 18px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: var(--primary-gradient);
     color: white;
     border: none;
     border-radius: 10px;
@@ -940,12 +996,12 @@ tbody tr:hover {
     font-size: 14px;
     font-weight: 500;
     transition: var(--transition);
-    box-shadow: 0 3px 12px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 3px 12px rgba(30, 64, 175, 0.3);
 }
 
 .btn-alert-action:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.4);
 }
 
 .storage-alert-critical .btn-alert-action {
@@ -1165,6 +1221,7 @@ tbody tr:hover {
     
     .id-cell:before { content: "ID:"; }
     .tarea-cell:before { content: "Task:"; }
+    .edit-cell:before { content: "Edit:"; }
     .fecha-cell:before { content: "Date:"; }
     .checkbox-cell:before { content: "Action:"; }
     .eliminar-cell:before { content: "Delete:"; }
